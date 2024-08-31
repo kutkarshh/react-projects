@@ -5,7 +5,7 @@ export default function Card({ id, name = "Not Provided", content }) {
     return (
         <div className="relative h-[400px] w-[300px] rounded-md m-2">
             <img
-                src="../public/hanuman.jpeg"
+                src="/hanuman.jpeg"
                 alt="avatar"
                 className="z-0 h-full w-full rounded-md object-cover"
             />
