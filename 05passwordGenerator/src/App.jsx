@@ -23,7 +23,7 @@ function App() {
       pass += str.charAt(char);
     }
     setPassword(pass);
-  }, [length, isNumericAllowed, isCharactersAllowed]);
+  }, [length, isNumericAllowed, isCharactersAllowed, setPassword]);
 
   const copyPasswordToClipboard = useCallback(() => {
     passwordRef.current?.select();
@@ -81,10 +81,11 @@ function App() {
               min={6}
               max={70}
               value={length}
-              className='w-96 appearance-none bg-transparent [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-[lime]'
+              className='appearance-none bg-transparent [&::-webkit-slider-thumb]:bg-[yellow]
+              [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-[lime]'
               onChange={(e) => setLength(Number(e.target.value))}
             />
-            <span>{length}</span>
+            <span>Length: {length}</span>
           </div>
           <div className='flex items-center gap-x-3'>
             <input
@@ -107,11 +108,11 @@ function App() {
         </div>
       </div>
       {isModalOpen && (
-        <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50'>
-          <div className='bg-slate-600 p-4 rounded-lg shadow-lg'>
-            <p className='text-lg text-white font-semibold' aria-live="assertive">Copied to clipboard!</p>
-          </div>
+        // <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50'>
+        <div className='bg-slate-600 p-4 rounded-lg shadow-lg fixed bottom-20'>
+          <p className='text-lg text-white font-semibold ' aria-live="assertive">Copied to clipboard!</p>
         </div>
+        // </div>
       )}
     </div>
   );
