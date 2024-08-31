@@ -1,0 +1,15 @@
+/* styles.css or App.css */
+@keyframes rainbowAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.bg-rainbow-animation {
+  background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 400% 400%;
+  animation: rainbowAnimation 60s ease infinite;
+}
