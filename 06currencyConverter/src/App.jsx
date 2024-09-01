@@ -44,7 +44,7 @@ function App() {
             entering an amount and selecting your desired currencies.
           </p>
           <div className="w-full mt-4">
-            <img src="../public/poster.jpg" alt="Currency" className="w-full rounded-lg" />
+            <img src="/poster.jpg" alt="Currency" className="w-full rounded-lg" />
           </div>
         </div>
 
