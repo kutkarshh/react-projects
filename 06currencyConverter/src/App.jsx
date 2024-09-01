@@ -44,7 +44,7 @@ function App() {
             entering an amount and selecting your desired currencies.
           </p>
           <div className="w-full mt-4">
-            <img src="https://via.placeholder.com/400" alt="Currency" className="w-full rounded-lg" />
+            <img src="../public/poster.jpg" alt="Currency" className="w-full rounded-lg" />
           </div>
         </div>
 
@@ -61,7 +61,7 @@ function App() {
                 label="From"
                 amount={amount}
                 currencyOptions={currencyOptionList}
-                onCurrencyChange={(currency) => setAmount(amount)}
+                onCurrencyChange={(currency) => setFrom(currency)}
                 selectCurrency={from}
                 onAmountChange={(amount) => setAmount(amount)}
               />
