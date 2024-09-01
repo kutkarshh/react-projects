@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+background-image:url("assets/trade.jpg");
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+background-position: center;
+background-repeat: no-repeat;
+}
